@@ -26,7 +26,7 @@ function Index({dataCourse}: CourseProps) {
             <div className="flex flex-wrap justify-start items-start -mx-6 mt-6">
                 {dataCourse?.length ? dataCourse?.map((course) => (
                     <CourseItem item={course} key={course.id}></CourseItem>
-                )) : <div className="w-full text-center-py-12">No Item Found</div>}
+                )) : <div className="w-full text-center py-12">No Course Found</div>}
             </div>
         </>
     );

@@ -1,41 +1,43 @@
 import React from 'react';
 import CategoryItem from "@/parts/ListCategories/CategoryItem";
+import Category from "@/model/category";
 
-interface CategoriesItem {
-    imageName: string,
-    name: string,
-    total: number,
-}
 
 function Index() {
-    const categories: CategoriesItem[] = [
+    const categories: Category[] = [
         {
-            imageName: "/public/images/icon-business-development.svg",
+            id: 1,
+            imageName: "/images/icon-business-development.svg",
             name: "Business Development",
             total: 12345,
         },
         {
-            imageName: "/public/images/icon-content-writer.svg",
+            id: 2,
+            imageName: "/images/icon-content-writer.svg",
             name: "Content Writer",
             total: 678,
         },
         {
-            imageName: "/public/images/icon-product-advertisement.svg",
+            id: 3,
+            imageName: "/images/icon-product-advertisement.svg",
             name: "Product Advertisement",
             total: 456,
         },
         {
-            imageName: "/public/images/icon-customer-relationship.svg",
+            id: 4,
+            imageName: "/images/icon-customer-relationship.svg",
             name: "Customer Relationship",
             total: 1324,
         },
         {
-            imageName: "/public/images/icon-game-development.svg",
+            id: 5,
+            imageName: "/images/icon-game-development.svg",
             name: "Game Development",
             total: 435,
         },
         {
-            imageName: "/public/images/icon-travel-guidance.svg",
+            id: 6,
+            imageName: "/images/icon-travel-guidance.svg",
             name: "Travel Guidance",
             total: 354,
         }
@@ -51,11 +53,11 @@ function Index() {
             </div>
             <div className={"flex flex-wrap justify-start items-center -mx-6 mt-6"}>
                 {categories.length > 0 ? (
-                        categories.map((item, index) => {
-                            return <CategoryItem key={index} item={item.name}></CategoryItem>
+                        categories.map((item) => {
+                            return <CategoryItem key={item.id} item={item}></CategoryItem>
                         }))
                     : (
-                        <div className={"w-full text-center py-12"}>No Item Found
+                        <div className={"w-full text-center py-12"}>No Categories Found
                         </div>
                     )}
             </div>

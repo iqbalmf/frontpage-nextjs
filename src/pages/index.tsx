@@ -3,7 +3,8 @@ import Header from "@/parts/Header";
 import Hero from "@/parts/Hero";
 import Clients from "@/parts/Clients";
 import ListCourse from "@/parts/ListCourse";
-import ListCategories  from "@/parts/ListCategories";
+import ListCategories from "@/parts/ListCategories";
+import Footer from "@/parts/Footer";
 import courseApi from "@/constant/api/courses";
 import Course from "@/model/courses";
 
@@ -38,10 +39,12 @@ const Home = ({courses}: HomeProps) => {
                         <ListCourse dataCourse={courses}></ListCourse>
                     </section>
                 </section>
-                <section>
-                    <section className={"container mx-auto pt-24"}>
-                        <ListCategories></ListCategories>
-                    </section>
+
+                <section className={"container mx-auto pt-24"}>
+                    <ListCategories></ListCategories>
+                </section>
+                <section className={"mt-24 bg-indigo-950 py-12"}>
+                    <Footer></Footer>
                 </section>
             </main>
         </>
