@@ -1,5 +1,6 @@
 import React from 'react';
 import Course from "@/model/courses";
+import Link from "next/link";
 
 interface ItemCourse {
     item: Course
@@ -9,6 +10,7 @@ function CourseItem({item}: ItemCourse) {
     return (
         <div className={'w-full md:w-1/4 px-4 mb-6'}>
             <div className={"item h-50 relative"}>
+                <Link href="/courses/[id]" as={`/courses/${item.id}`} className={"link-wrapped"}/>
                 <figure className="item-image h-full">
                     <img
                         src={item?.thumbnail ?? ""}

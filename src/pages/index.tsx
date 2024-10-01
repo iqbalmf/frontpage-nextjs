@@ -13,7 +13,6 @@ interface HomeProps {
 }
 
 const Home = ({courses}: HomeProps) => {
-    console.log(`HOME ${courses}`)
     return (
         <>
             <Head>

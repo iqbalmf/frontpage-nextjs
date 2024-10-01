@@ -36,3 +36,44 @@ body {
 .item:hover figure.item-image:before {
     @apply opacity-75;
 }
+
+.video-wrapper {
+    @apply absolute inset-0 z-0;
+    width: 100%; /* Adjust this as needed */
+    padding-bottom: 56.25%;
+}
+
+.video-wrapper iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.link-wrapped:before {
+    @apply cursor-pointer z-10 inset-0 absolute;
+    content: "";
+}
+
+.meta-price {
+    @apply fixed bottom-0;
+    transition: all ease-in-out 0.45s;
+    box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.meta-price-enter {
+    opacity: 0;
+    bottom: -100%;
+}
+.meta-price-enter-active {
+    opacity: 1;
+    bottom: 0;
+}
+.meta-price-exit {
+    opacity: 1;
+    bottom: 0;
+}
+.meta-price-exit-active {
+    opacity: 0;
+    bottom: -100%;
+}
+.meta-price-enter-done {
+    @apply bottom-0 opacity-100 fixed;
+}
