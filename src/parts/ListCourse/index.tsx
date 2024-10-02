@@ -20,7 +20,7 @@ function Index({dataCourse}: CourseProps) {
                     </h3>
                 </div>
                 <div className="w-auto">
-                    <Link href={"/course"} className={"text-gray-600 hover:underline text-sm"}>View All Courses</Link>
+                    <Link href={"/courses"} className={"text-gray-600 hover:underline text-sm"}>View All Courses</Link>
                 </div>
             </div>
             <div className="flex flex-wrap justify-start items-start -mx-6 mt-6">
